@@ -1,0 +1,36 @@
+{
+    "description": "Extra Dobby plugins",
+    "definitions": {
+        "MySuperAwesomePlugin": {
+            "type": "object",
+            "required": [
+                "required",
+                "data"
+            ],
+            "properties": {
+                "required": {
+                    "type": "boolean"
+                },
+                "dependsOn": {
+                    "$ref": "defs.json#/definitions/ArrayOfStrings"
+                },
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "myString": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "RdkPlugins": {
+            "type": "object",
+            "properties": {
+                "mysuperawesomeplugin": {
+                    "$ref": "#/definitions/MySuperAwesomePlugin"
+                }
+            }
+        }
+    }
+}
